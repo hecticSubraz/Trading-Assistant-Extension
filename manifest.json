@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Trading Assistant",
+  "version": "1.0",
+  "description": "A Chrome extension for trading tools, website shortcuts, strategy sync, alerts, and portfolio tracking.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "notifications",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://nepsealpha.com/*",
+    "https://www.tradingview.com/*",
+    "https://merolagani.com/*",
+    "https://www.forbes.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

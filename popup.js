@@ -1,0 +1,1 @@
+// Popup interaction script
