@@ -1,10 +1,34 @@
+<!-- popup.html -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Trading Assistant</title>
-  </head>
-  <body>
-    <h1>Welcome to Trading Assistant</h1>
-    <script src="popup.js"></script>
-  </body>
+<head>
+  <title>Trading Assistant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 250px;
+      padding: 10px;
+    }
+    h2 {
+      text-align: center;
+    }
+    button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Trading Assistant</h2>
+  <button onclick="openSite('https://nepsealpha.com/')">NEPSE Alpha</button>
+  <button onclick="openSite('https://www.tradingview.com/')">TradingView</button>
+  <button onclick="openSite('https://merolagani.com/latestmarket.aspx')">MeroLagani</button>
+  <button onclick="openSite('https://www.forbes.com/digital-assets/crypto-prices/?sh=77fb0c624785')">Forbes Crypto</button>
+
+  <script src="popup.js"></script>
+</body>
 </html>
