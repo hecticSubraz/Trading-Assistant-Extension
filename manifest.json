@@ -2,33 +2,31 @@
   "manifest_version": 3,
   "name": "Trading Assistant",
   "version": "1.0",
-  "description": "A Chrome extension for trading tools, website shortcuts, strategy sync, alerts, and portfolio tracking.",
+  "description": "Quick access to trading websites and sync trading strategies with Google Docs.",
   "action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
-    }
+    "default_icon": "icon.png"
   },
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
-  "permissions": [
-    "storage",
-    "notifications",
-    "activeTab",
-    "scripting"
-  ],
+  "permissions": ["tabs", "storage", "identity"],
   "host_permissions": [
-    "https://nepsealpha.com/*",
-    "https://www.tradingview.com/*",
-    "https://merolagani.com/*",
-    "https://www.forbes.com/*"
+    "https://nepsealpha.com/",
+    "https://www.tradingview.com/",
+    "https://merolagani.com/",
+    "https://www.forbes.com/"
   ],
+  "oauth2": {
+    "client_id": "YOUR_GOOGLE_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/documents",
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
   "background": {
     "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   }
 }
